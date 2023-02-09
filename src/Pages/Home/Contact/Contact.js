@@ -5,7 +5,7 @@ const Contact = () => {
     return (
         <div style={{
             background:`url(${appointment})`
-        }} className='bg-primary px-10 py-14 w-4/5 ml-10 '>
+        }} className='bg-primary px-10 py-14 w-4/5 ml-14 '>
           <div className='text-center pb-14 text-white'>
             <p className=' text-2xl text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary font-bold'>
               Contact Us
