@@ -6,9 +6,11 @@ const Review = ({ review }) => {
             <div className="card-body">
 
                 <p className='text-green-800'>
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reprehenderit aliquam ullam eveniet nam itaque velit.
-
+                    The doctor was very professional and knowledgeable .They took the time to listen to my concerns and answer all of my questions.
                 </p>
+
+
+
                 <div className="flex items-center">
                     <div className="avatar">
                         <div className="w-16 rounded-full ring ring-primary ring-offset-base-100 mr-5">

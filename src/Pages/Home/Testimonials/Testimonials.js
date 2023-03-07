@@ -1,7 +1,7 @@
 import React from 'react';
-import people1 from '../../../assets/images/people1.png'
-import people2 from '../../../assets/images/people2.png'
-import people3 from '../../../assets/images/people3.png'
+import people1 from '../../../assets/images/p-1.png'
+import people2 from '../../../assets/images/p-2.png'
+import people3 from '../../../assets/images/p-3.png'
 import quote from '../../../assets/icons/quote.svg'
 import Review from './Review';
 
@@ -9,21 +9,21 @@ import Review from './Review';
         const reviews = [
             {
                 _id : 1,
-                name: 'Dr.Ripon',
+                name: 'MD.Ripon ',
                 review: '',
                 location: 'House Building',
                 img: people1
             },
             {
                 _id : 2,
-                name: 'Dr.Khokon',
+                name: 'Khokon ',
                 review: '',
                 location: 'Mirpur 1',
                 img: people2
             },
             {
                 _id : 3,
-                name: 'Dr. Mehedi ',
+                name: 'Mehedi Molla ',
                 review: '',
                 location: 'Jatrabari ',
                 img: people3

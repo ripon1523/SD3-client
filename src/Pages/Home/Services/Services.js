@@ -8,20 +8,20 @@ const Services = () => {
     const servicesData = [
         {
             id: 1,
-            name: 'kisuan',
-            description: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Provident eveniet nihil assumenda, nostrum adipisci earum!",
+            name: 'Annual checkups',
+            description: "A primary care doctor can complete yearly checkups, which are important, especially as we get older. They are also familiar with their patients' medical histories and will know what they are at a higher risk for.",
             img: img1
         },
         {
             id: 2,
-            name: 'kisuan',
-            description: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Provident eveniet nihil assumenda, nostrum adipisci earum!",
+            name: 'Proper disease diagnosis',
+            description: "Primary care doctors can do physical exams or run lab tests to diagnose diseases or other illnesses.!",
             img: img2
         },
         {
             id: 3,
-            name: 'kisuan',
-            description: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Provident eveniet nihil assumenda, nostrum adipisci earum!",
+            name: 'Preventive services',
+            description: "Many primary care doctors provide health promotion education to help prevent illnesses or diseases.",
             img: img3
         },
     ]
