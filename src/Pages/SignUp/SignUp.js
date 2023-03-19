@@ -6,31 +6,47 @@ import { AuthContext } from '../../contexts/AuthProvider';
 
 const SignUp = () => {
     const { register, formState: { errors }, handleSubmit } = useForm()
-    const {createUser,updateUser} =useContext(AuthContext);
-    const [signUpError,setSignUpError]=useState('')
+    const { createUser, updateUser } = useContext(AuthContext);
+    const [signUpError, setSignUpError] = useState('')
     const navigate = useNavigate();
     const handleSignUp = data => {
         setSignUpError('');
-        createUser(data.email,data.password)
-        .then(result =>{
-            const user = result.user;
-            console.log(user);
-            toast('User Created Successfully')
-            const userInfo = {
-                displayName: data.name
-            }
-            updateUser(userInfo)
-            .then(()=>{
+        createUser(data.email, data.password)
+            .then(result => {
+                const user = result.user;
+                console.log(user);
+                toast('User Created Successfully')
+                const userInfo = {
+                    displayName: data.name
+                }
+                updateUser(userInfo)
+                    .then(() => {
 
+                        saveUser(data.name,data.email);
+                    })
+                    .catch(err => console.log(err));
+            })
+            .catch(error => {
+                console.log(error)
+                setSignUpError(error.message)
+            });
+
+    }
+
+    const saveUser = (name, email) => {
+        const user = { name, email };
+        fetch('http://localhost:5000/users', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(user)
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log('saveUser',data);
                 navigate('/');
             })
-            .catch(err => console.log(err));
-        })
-        .catch(error => {
-            console.log(error)
-            setSignUpError(error.message)
-        });
-
     }
     return (
         <div className='h-[800px]  flex justify-center items-center'>
@@ -68,7 +84,7 @@ const SignUp = () => {
 
                                 })} />
                         {errors.password && <p className='text-red-500' >{errors.password?.message}</p>}
-                        
+
                     </div>
 
 
@@ -76,7 +92,7 @@ const SignUp = () => {
                     {signUpError && <p className='text-red-600'>{signUpError}</p>}
                 </form>
 
-                
+
 
                 <p className='text-green-800'>Already have an account ?<Link className='text-primary' to="/login" > Please Login </Link> </p>
                 <div className="divider">OR</div>
