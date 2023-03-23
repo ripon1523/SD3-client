@@ -74,7 +74,7 @@ const Login = () => {
                 </div>
 
                 <p className='text-green-800'>New to Doctors Portal ?<Link className='text-primary' to="/signup" > Create new account </Link> </p>
-                <div className="divider">OR</div>
+                <div className="divider"> OR </div>
 
                 <button className='btn btn-primary bg-gradient-to-r from-primary to-secondary text-white w-full ' >CONTINUE WITH GOOGLE</button>
             </div>
