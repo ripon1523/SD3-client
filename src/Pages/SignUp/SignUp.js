@@ -19,7 +19,7 @@ const SignUp = () => {
                 const userInfo = {
                     displayName: data.name
                 }
-                updateUser(userInfo)
+                updateUser(userInfo) 
                     .then(() => {
 
                         saveUser(data.name,data.email);
